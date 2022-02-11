@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-12T02:58:59 IST" name="Default suite" finished-at="2022-02-12T03:01:15 IST" duration-ms="135285">
+  <suite started-at="2022-02-12T04:20:09 IST" name="Default suite" finished-at="2022-02-12T04:20:35 IST" duration-ms="26084">
     <groups>
     </groups>
-    <test started-at="2022-02-12T02:58:59 IST" name="Default test" finished-at="2022-02-12T03:01:15 IST" duration-ms="135285">
+    <test started-at="2022-02-12T04:20:09 IST" name="Default test" finished-at="2022-02-12T04:20:35 IST" duration-ms="26084">
       <class name="acd.TestScript">
-        <test-method is-config="true" signature="startTest()[pri:0, instance:acd.TestScript@7714e963]" started-at="2022-02-12T02:58:59 IST" name="startTest" finished-at="2022-02-12T02:59:18 IST" duration-ms="18514" status="PASS">
+        <test-method is-config="true" signature="startTest()[pri:0, instance:acd.TestScript@7714e963]" started-at="2022-02-12T04:20:09 IST" name="startTest" finished-at="2022-02-12T04:20:22 IST" duration-ms="12642" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method signature="basicDetail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.testng.ITestContext)[pri:2, instance:acd.TestScript@7714e963]" started-at="2022-02-12T02:59:19 IST" name="basicDetail" data-provider="fetchData" finished-at="2022-02-12T03:01:15 IST" duration-ms="115859" status="FAIL">
+        <test-method signature="basicDetail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.testng.ITestContext)[pri:2, instance:acd.TestScript@7714e963]" started-at="2022-02-12T04:20:23 IST" name="basicDetail" data-provider="fetchData" finished-at="2022-02-12T04:20:35 IST" duration-ms="12236" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -111,9 +111,9 @@
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-E01HO7SE', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\thiru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56854}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 07e5e0de27cbec4b525d413c46d87cd0
-*** Element info: {Using=xpath, value=//*[contains(@id,'cmdContinue')]}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\thiru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64146}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ec2894ad1b2dab777c341869e17a9241
+*** Element info: {Using=xpath, value=//*[contains(@id,'lnkNewRequest')]}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
@@ -121,9 +121,9 @@ Session ID: 07e5e0de27cbec4b525d413c46d87cd0
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-E01HO7SE', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\thiru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56854}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 07e5e0de27cbec4b525d413c46d87cd0
-*** Element info: {Using=xpath, value=//*[contains(@id,'cmdContinue')]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.82, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\thiru\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64146}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ec2894ad1b2dab777c341869e17a9241
+*** Element info: {Using=xpath, value=//*[contains(@id,'lnkNewRequest')]}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -139,7 +139,7 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at acd.TestScript.basicDetail(TestScript.java:130)
+at acd.TestScript.basicDetail(TestScript.java:58)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,7 +174,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- basicDetail -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:acd.TestScript@7714e963]" started-at="2022-02-12T03:01:15 IST" name="closeBrowser" finished-at="2022-02-12T03:01:15 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:acd.TestScript@7714e963]" started-at="2022-02-12T04:20:35 IST" name="closeBrowser" finished-at="2022-02-12T04:20:35 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
