@@ -167,7 +167,7 @@ public class TestScript {
         Thread.sleep(18000);
         String fileNum = driver.findElement(By.xpath("//*[contains(@id,'lblFileNumber')]")).getText();
         //return fileNum;
-        System.out.println("File Number->"+fileNum);
+        System.out.println("Successfully created File Number->"+fileNum);
         ctx.setAttribute("fileNum", fileNum);
         //addReport(fileNum);
         //driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
