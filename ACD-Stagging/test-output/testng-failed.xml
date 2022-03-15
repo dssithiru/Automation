@@ -5,9 +5,11 @@
     <classes>
       <class name="acd.TestScript">
         <methods>
+          <include name="FileInfo" invocation-numbers="0"/>
+          <include name="SearchRequest"/>
           <include name="closeBrowser"/>
           <include name="startTest"/>
-          <include name="basicDetail" invocation-numbers="0"/>
+          <include name="ACDQuicklinks"/>
         </methods>
       </class> <!-- acd.TestScript -->
     </classes>
