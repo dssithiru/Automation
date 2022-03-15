@@ -273,6 +273,7 @@ public class TestScript {
 		Thread.sleep(7000);
 		WebElement totalprice= driver.findElement(By.xpath("//span[contains(text(),'Total Price')]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",totalprice);
+		System.out.println("-->Add Report-Method is Executed Successfully");
 		Thread.sleep(5000);
 	}
 
@@ -375,6 +376,7 @@ public class TestScript {
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", DisputedFiles3);
 		DisputedFiles3.click();
+		System.out.println("-->ACD_Quicklinks-Method is Executed Successfully");
 		Thread.sleep(5000);
 
 	}
@@ -475,6 +477,7 @@ public class TestScript {
 		Thread.sleep(8000);
 		WebElement totalprice= driver.findElement(By.xpath("//span[contains(text(),'Total Price')]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",totalprice);
+		System.out.println("-->Document Upload-Method is Executed Successfully");
 		Thread.sleep(10000);
 	}
 
@@ -721,6 +724,7 @@ public class TestScript {
 				Thread.sleep(3000);
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", DisputedFiles14);
 				DisputedFiles14.click();
+				System.out.println("-->Search Request-Method is Executed Successfully");
 				Thread.sleep(5000);
 	}
 	@Test (priority = 6)
@@ -857,6 +861,7 @@ public class TestScript {
 		driver.findElement(By.xpath("//*[contains(@id,'lblSave')]")).click();
 		Thread.sleep(8000);
 		driver.switchTo().alert().accept();
+		System.out.println("-->'File info_fuctionality'-Method is Executed Successfully");
 		Thread.sleep(7000);
 		}
 	
@@ -991,6 +996,7 @@ public class TestScript {
     		totalprice4.click();
     		WebElement totalprice5= driver.findElement(By.xpath("//span[contains(text(),'Total Price')]"));
     		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",totalprice5);
+    		System.out.println("-->'Actions_fuctionality'-Method is Executed Successfully");
     		Thread.sleep(7000);
     		
             
