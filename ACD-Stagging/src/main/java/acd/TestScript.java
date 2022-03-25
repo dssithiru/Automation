@@ -48,8 +48,8 @@ public class TestScript {
 		driver.findElement(By.id("Password")).sendKeys("Tester1@");
 		driver.findElement(By.xpath("//*[@id=\"loginForm\"]/form/div[3]/div/input")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//*[contains(text(),' Switch to Classic Dashboard ')]")).click();
-		Thread.sleep(4000);
+		//driver.findElement(By.xpath("//*[contains(text(),' Switch to Classic Dashboard ')]")).click();
+		Thread.sleep(6000);
 	}
 
 	@DataProvider(name="fetchData")       
@@ -60,7 +60,7 @@ public class TestScript {
 	}
 
 
-	@Test(priority=3, dataProvider = "fetchData")
+	@Test(priority=1, dataProvider = "fetchData")
 	public  void basicDetail(String firstName,String middleName,String lastName,String country,
 			String ssnNum,String ssnReNum,String dob,String zipCode,String school,String eduCity,String region,String eduCountry,
 			String eduDegree,String grad,String gradDate,String rectArea,String invoiceNotes,ITestContext ctx
@@ -163,7 +163,7 @@ public class TestScript {
 		graddate.sendKeys(gradDate,Keys.ENTER);
 
 		//js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//*[contains(@id,'lbTitle')]")));
-		Thread.sleep(20000);      
+		Thread.sleep(25000);      
 		driver.findElement(By.xpath("//*[contains(@id,'cmdContinue')]")).click();
 		Thread.sleep(23000);
 		try {
@@ -216,7 +216,7 @@ public class TestScript {
    }*/
 
 
-	@Test(priority = 4)
+	@Test(priority = 2)
 	public void addReport(ITestContext ctx) throws InterruptedException {
 		/*driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 		Thread.sleep(6000);
@@ -292,7 +292,7 @@ public class TestScript {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 6)
 	public void ACDQuicklinks() throws InterruptedException{
 		//-->Quick Links
 		driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
@@ -328,9 +328,9 @@ public class TestScript {
 		DisputedFiles.click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[contains(text(),'Summary')]")).click(); 
-		Thread.sleep(9000);
+		Thread.sleep(15000);
 		driver.findElement(By.xpath("//*[contains(@id,'UcBgdReqViewer1_imgClose')]")).click();
-		Thread.sleep(7000);
+		Thread.sleep(9000);
 		driver.findElement(By.xpath("//*[contains(text(),'View/Print')]")).click();
 		Thread.sleep(13000);
 		driver.findElement(By.xpath("//*[@id='ctl00_ClientMasterBody']/div[6]/div[1]/a/span")).click(); 
@@ -357,7 +357,23 @@ public class TestScript {
              	    e.printStackTrace();
              	}
              	              }
-             	       
+		 Thread.sleep(5000);
+			//driver.switchTo().alert().accept();
+			//Thread.sleep(4000);
+			 try {
+	         	
+	             driver.switchTo().alert().accept();
+	         } catch (Exception e) {
+	             try {
+	             	if(e.toString().contains("org.openqa.selenium.UnhandledAlertException")) {
+	             		Alert alert = driver.switchTo().alert();
+	             		   
+	             	    alert.accept();
+	             	 }
+	             	} catch (NoAlertPresentException e1) {
+	             	    e.printStackTrace();
+	             	}
+	             	              }
          Actions act=new Actions(driver);
          act.sendKeys(Keys.ESCAPE).sendKeys(Keys.ESCAPE).build().perform();
         // Thread.sleep(3000);
@@ -378,7 +394,7 @@ public class TestScript {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", DisputedFiles2);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
-		Thread.sleep(10000);
+		Thread.sleep(12000);
 		//driver.findElement(By.xpath("//*[contains(text(),'Draft - DFT')]")).click();
 		driver.findElement(By.xpath("//*[contains(text(),'Closed - C')]")).click();
 		Thread.sleep(6000);
@@ -396,7 +412,7 @@ public class TestScript {
 
 	}
 	
-	@Test(priority = 5)
+	@Test(priority = 3)
 	public void docUpload(ITestContext ctx) throws InterruptedException {
 
 		//driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
@@ -496,10 +512,10 @@ public class TestScript {
 		Thread.sleep(10000);
 	}
 
-	@Test (priority = 2)
+	@Test (priority = 7)
 	public void SearchRequest() throws InterruptedException {
 		driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
-		Thread.sleep(6000);
+		Thread.sleep(10000);
 		driver.findElement(By.xpath("//*[contains(@id,'lnkSearchRequests')]")).click();
 		//-->SEARCH BY FIRST NAME
 		driver.findElement(By.xpath("//*[contains(@id,'txtFName')]")).sendKeys("T");
@@ -742,7 +758,7 @@ public class TestScript {
 				System.out.println("-->Search Request-Method is Executed Successfully");
 				Thread.sleep(5000);
 	}
-	@Test (priority = 6)
+	@Test (priority = 4)
 	public void FileInfo(ITestContext ctx) throws InterruptedException {
 		//driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 		//Thread.sleep(6000);
@@ -777,10 +793,10 @@ public class TestScript {
 		}
 		
 		//driver.findElement(By.xpath("//span[contains(text(),'Investigation Summary')]")).click();
-		Thread.sleep(4000);
+		Thread.sleep(8000);
 		WebElement totalprice= driver.findElement(By.xpath("//span[contains(text(),'Total Price')]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",totalprice);
-		WebElement imgMSG = driver.findElement(By.xpath("//*[contains(@id,'imgMSG')]"));
+		/*WebElement imgMSG = driver.findElement(By.xpath("//*[contains(@id,'imgMSG')]"));
 		Actions act = new Actions(driver);
 		//actions.doubleClick(imgMSG).perform();
 		
@@ -791,9 +807,10 @@ public class TestScript {
 		imgMSG.click();
 		//-->INVESTIGATION SUMMARY
 		//driver.findElement(By.xpath("//*[contains(@id,'imgMSG')]")).click();
-		Thread.sleep(20000);
+		Thread.sleep(26000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//*[contains(@id,'btnAdd')]")));
+		Thread.sleep(8000);
 		driver.findElement(By.xpath("//*[contains(@id,'btnAdd')]")).click();
 		Thread.sleep(10000);
 		driver.findElement(By.xpath("//*[contains(@id,'btnYes')]")).sendKeys(Keys.TAB);
@@ -818,16 +835,31 @@ public class TestScript {
               	} catch (NoAlertPresentException e1) {
               	    e.printStackTrace();
               	}
-              	              }
+              	              }*/
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[contains(text(),'SCHOOLTEST')]//parent::td//preceding::a[1]")).click();
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id='mainBox']")).click();
+		Actions act = new Actions(driver);
 		act.keyDown(Keys.CONTROL).sendKeys(Keys.END).perform();
 		Thread.sleep(8000);
 		
 		driver.findElement(By.xpath("//*[contains(@id,'btnAdd')]")).click();
 		Thread.sleep(10000);
+		try {
+          	
+            driver.switchTo().alert().accept();
+        } catch (Exception e) {
+            try {
+            	if(e.toString().contains("org.openqa.selenium.UnhandledAlertException")) {
+            		Alert alert = driver.switchTo().alert();
+            		   
+            	    alert.accept();
+            	 }
+            	} catch (NoAlertPresentException e1) {
+            	    e.printStackTrace();
+            	}
+            	              }
 		//driver.findElement(By.xpath("//*[contains(@id,'ctl03_txtFileMessage')]")).click();
 		driver.findElement(By.xpath("//*[contains(@id,'btnYes')]")).sendKeys(Keys.TAB);
 		WebElement Msgfield= driver.findElement(By.xpath("//*[contains(@id,'ctl02_txtFileMessage')]"));
@@ -884,8 +916,8 @@ public class TestScript {
 		driver.findElement(By.xpath("//*[contains(@id,'btnAdd')]")).click();
 		Thread.sleep(15000);
 		driver.findElement(By.xpath("//*[contains(@id,'btnYes')]")).sendKeys(Keys.TAB);
-		driver.findElement(By.xpath("//*[contains(@id,'ctl04_txtFileMessage')]")).sendKeys("TeST Message333",Keys.ENTER);
-		//driver.findElement(By.xpath("//*[contains(@id,'ctl03_txtFileMessage')]")).sendKeys("TeST Message333",Keys.ENTER);
+		//driver.findElement(By.xpath("//*[contains(@id,'ctl04_txtFileMessage')]")).sendKeys("TeST Message333",Keys.ENTER);
+		driver.findElement(By.xpath("//*[contains(@id,'ctl03_txtFileMessage')]")).sendKeys("TeST Message333",Keys.ENTER);
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[contains(@id,'btnYes')]")).click();
 		Thread.sleep(4000);
@@ -896,7 +928,7 @@ public class TestScript {
 		Thread.sleep(7000);
 		}
 	
-	@Test (priority = 7)
+	@Test (priority = 5)
 		public void Actions(ITestContext ctx) throws InterruptedException {
 			//driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 			//Thread.sleep(6000);
@@ -970,7 +1002,20 @@ public class TestScript {
                 	} catch (NoAlertPresentException e1) {
                 	    e.printStackTrace();
                 	}
-                	              }
+                	              } Thread.sleep(20000);
+                	              try {
+                	                  driver.switchTo().alert().accept();
+                	              } catch (Exception e) {
+                	                  try {
+                	                  	if(e.toString().contains("org.openqa.selenium.UnhandledAlertException")) {
+                	                  		Alert alert = driver.switchTo().alert();
+                	                  		   
+                	                  	    alert.accept();
+                	                  	 }
+                	                  	} catch (NoAlertPresentException e1) {
+                	                  	    e.printStackTrace();
+                	                  	}
+                	                  	              }
                 	       
             Actions act=new Actions(driver);
             act.sendKeys(Keys.ESCAPE).sendKeys(Keys.ESCAPE).build().perform();
@@ -1057,7 +1102,7 @@ public class TestScript {
 		Thread.sleep(3000);
 		//Clicking Print Link
 		driver.findElement(By.xpath("//*[contains(@id,'cmdPrint')]")).click();
-		Thread.sleep(16000);
+		Thread.sleep(20000);
 		driver.findElement(By.xpath("//span[contains(text(),'Close')]")).click();
 		Thread.sleep(3000);
 		//Clicking Document Link
@@ -1112,17 +1157,18 @@ public class TestScript {
 		Thread.sleep(5000);
 		WebElement gridpage8= driver.findElement(By.xpath("//*[@id='ctl00_SecureClientPlaceHolder_UcArchivedBgdReqViewer1_pnArchivedFileSearchResultDetail']/div[4]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",gridpage8);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//tbody/tr/td[5]/a[contains(text(),'5')]")).click();
 		Thread.sleep(5000);
 		WebElement gridpage9= driver.findElement(By.xpath("//*[@id='ctl00_SecureClientPlaceHolder_UcArchivedBgdReqViewer1_pnArchivedFileSearchResultDetail']/div[4]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",gridpage9);
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//tbody/tr/td[7]/a[contains(text(),'7')]")).click();
 		Thread.sleep(5000);
 		WebElement gridpage10= driver.findElement(By.xpath("//*[@id='ctl00_SecureClientPlaceHolder_UcArchivedBgdReqViewer1_pnArchivedFileSearchResultDetail']/div[4]"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",gridpage10);
-		Thread.sleep(5000);	
+		System.out.println("-->Offline Reports-Method is Executed Successfully");
+		Thread.sleep(7000);	
 		}
 	
 	@Test(priority = 9)
@@ -1158,9 +1204,26 @@ public class TestScript {
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",FileAdjud2);
 			FileAdjud2.click();
 		}
-		Thread.sleep(6000);
+		Thread.sleep(16000);
 		// 1st Adjudication
-		driver.findElement(By.xpath("//*[contains(@id,'btnAdd')]")).click();
+		driver.findElement(By.xpath("//*[contains(@class,'detailbutton')]")).click();Thread.sleep(24000);
+		 try {
+	          	
+             driver.switchTo().alert().accept();
+             Thread.sleep(3000);
+         } catch (Exception e) {
+             try {
+             	if(e.toString().contains("org.openqa.selenium.UnhandledAlertException")) {
+             		Alert alert = driver.switchTo().alert();
+             		   
+             	    alert.accept();
+             	    Thread.sleep(3000);
+             	 }
+             	} catch (NoAlertPresentException e1) {
+             	    e.printStackTrace();
+             	}
+             
+             	              }Thread.sleep(5000);
 		Thread.sleep(16000);
 		new Select (driver.findElement(By.xpath("//select[contains(@id,'ddlAdjudication')]"))).selectByValue("YFLAG");
 		WebElement emailTo= driver.findElement(By.xpath("//*[contains(@id,'txtEmailTo')]"));
@@ -1169,7 +1232,7 @@ public class TestScript {
 		emailTo.sendKeys((Keys.TAB),"Test Message one",(Keys.TAB));
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[contains(@id,'lblSave')]")).click();
-		Thread.sleep(13000);
+		Thread.sleep(16000);
 		//driver.switchTo().alert().accept();
 		 try {
 	          	
@@ -1186,10 +1249,29 @@ public class TestScript {
              	} catch (NoAlertPresentException e1) {
              	    e.printStackTrace();
              	}
-             	              }Thread.sleep(3000);
+             
+             	              }Thread.sleep(5000);
+             	             try {
+             		          	
+             	                driver.switchTo().alert().accept();
+             	                Thread.sleep(3000);
+             	            } catch (Exception e) {
+             	                try {
+             	                	if(e.toString().contains("org.openqa.selenium.UnhandledAlertException")) {
+             	                		Alert alert = driver.switchTo().alert();
+             	                		   
+             	                	    alert.accept();
+             	                	    Thread.sleep(3000);
+             	                	 }
+             	                	} catch (NoAlertPresentException e1) {
+             	                	    e.printStackTrace();
+             	                	}
+             	                
+             	                	              }
+             	              Thread.sleep(5000);
 		// 2nd Adjudication
-			driver.findElement(By.xpath("//*[contains(@id,'btnAdd')]")).click();
-			Thread.sleep(16000);
+			driver.findElement(By.xpath("//*[contains(@class,'detailbutton')]")).click();
+			Thread.sleep(24000);
 			new Select (driver.findElement(By.xpath("//select[contains(@id,'ddlAdjudication')]"))).selectByValue("GFLAG");
 			WebElement emailTo2= driver.findElement(By.xpath("//*[contains(@id,'txtEmailTo')]"));
 			emailTo2.clear();
@@ -1197,7 +1279,7 @@ public class TestScript {
 			emailTo2.sendKeys((Keys.TAB),"Test Message TWO",(Keys.TAB));
 			Thread.sleep(5000);
 			driver.findElement(By.xpath("//*[contains(@id,'lblSave')]")).click();
-			Thread.sleep(13000);
+			Thread.sleep(16000);
 			//driver.switchTo().alert().accept();
 			 try {
 		          	
@@ -1225,21 +1307,24 @@ public class TestScript {
 			
 			 if(ReAdverse.isDisplayed()) {
 				 ReAdverse.click();
-				 Thread.sleep(5000);
+				 Thread.sleep(10000);
 			 }else {driver.findElement(By.xpath("//*[contains(@id,'cmdYesForAdverseQuestion')]")).click();
-			 Thread.sleep(5000);}
+			 Thread.sleep(10000);}
 			 } catch (Exception e) {
 					// TODO: handle exception
-				}
+				}Thread.sleep(10000);
 			 try {
 				 driver.findElement(By.xpath("//*[contains(@id,'cmdYesForAdverseQuestion')]")).click();
-				 Thread.sleep(3000);
+				 Thread.sleep(6000);
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-			 
-			 driver.findElement(By.xpath("//td/a[contains(@id,'cmdPrint')]")).click();
-			 Thread.sleep(25000);
+			 Thread.sleep(10000);
+			 WebElement print= driver.findElement(By.xpath("//td/a[contains(@id,'cmdPrint')]"));
+			 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",print);
+			 Thread.sleep(3000);
+				print.click();
+			 Thread.sleep(30000);
 			 ArrayList<String> tabs_windows = new ArrayList<String> (driver.getWindowHandles());
 				driver.switchTo().window(tabs_windows.get(1));
 				Thread.sleep(5000);
@@ -1249,8 +1334,9 @@ public class TestScript {
 				driver.findElement(By.xpath("//*[@id='ctl00_ClientMasterBody']/div[10]/div[11]/div/button/span")).click();
 				Thread.sleep(3000);
 				driver.findElement(By.xpath("//*[@id='ctl00_ClientMasterBody']/div[8]/div[11]/div/button/span")).click();
-				Thread.sleep(3000);
-				
+				Thread.sleep(8000);
+				System.out.println("-->'File Adjudication & FCRA'-Method is Executed Successfully");
+				Thread.sleep(7000);
 			
 	}
 	@AfterClass
