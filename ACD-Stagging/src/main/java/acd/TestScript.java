@@ -47,9 +47,11 @@ public class TestScript {
 		driver.findElement(By.id("Username")).sendKeys("tester1");
 		driver.findElement(By.id("Password")).sendKeys("Tester1@");
 		driver.findElement(By.xpath("//*[@id=\"loginForm\"]/form/div[3]/div/input")).click();
-		Thread.sleep(5000);
-		//driver.findElement(By.xpath("//*[contains(text(),' Switch to Classic Dashboard ')]")).click();
-		Thread.sleep(6000);
+		Thread.sleep(8000);
+		WebElement classicDash= driver.findElement(By.xpath("//*[contains(text(),' Switch to Classic Dashboard ')]"));
+		if(classicDash.isDisplayed()) {classicDash.click();}else{
+			driver.findElement(By.xpath("//*[contains(@id,'lnkNewRequest')]")).click();Thread.sleep(5000);}
+		Thread.sleep(7000);
 	}
 
 	@DataProvider(name="fetchData")       
@@ -66,12 +68,16 @@ public class TestScript {
 			String eduDegree,String grad,String gradDate,String rectArea,String invoiceNotes,ITestContext ctx
 			) throws MalformedURLException, InterruptedException {
 
-
-		//submit-request
-		driver.findElement(By.xpath("//*[contains(@id,'lnkNewRequest')]")).click();
+try {
+	//submit-request
+			driver.findElement(By.xpath("//*[contains(@id,'lnkNewRequest')]")).click();
+} catch (Exception e) {
+	// TODO: handle exception
+}
+		
 
 		//A LA CARTE
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[contains(@id,'lnkAlaCart')]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//label[contains(text(),'EDUCATION VERIFICATION')]//preceding::input[1]")).click();

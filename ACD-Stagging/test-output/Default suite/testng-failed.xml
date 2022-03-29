@@ -5,17 +5,17 @@
     <classes>
       <class name="acd.TestScript">
         <methods>
-          <include name="FileInfo"/>
-          <include name="Actions"/>
+          <include name="FileInfo" invocation-numbers="0"/>
+          <include name="Actions" invocation-numbers="0"/>
           <include name="SearchRequest"/>
           <include name="closeBrowser"/>
           <include name="OfflineReports"/>
           <include name="startTest"/>
-          <include name="addReport"/>
-          <include name="basicDetail"/>
+          <include name="addReport" invocation-numbers="0"/>
+          <include name="basicDetail" invocation-numbers="0"/>
           <include name="ACDQuicklinks"/>
           <include name="FileAdjud_FCRA"/>
-          <include name="docUpload"/>
+          <include name="docUpload" invocation-numbers="0"/>
         </methods>
       </class> <!-- acd.TestScript -->
     </classes>
