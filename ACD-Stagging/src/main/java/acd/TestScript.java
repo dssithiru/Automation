@@ -80,7 +80,7 @@ try {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[contains(@id,'lnkAlaCart')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//label[contains(text(),'EDUCATION VERIFICATION')]//preceding::input[1]")).click();
+		/*driver.findElement(By.xpath("//label[contains(text(),'EDUCATION VERIFICATION')]//preceding::input[1]")).click();
 		driver.findElement(By.xpath("//label[contains(text(),'PRIORITY STATUS')]//preceding::input[1]")).click();
 		driver.findElement(By.xpath("//*[contains(@id,'cmdNewRequest')]")).click();
 
@@ -220,9 +220,9 @@ try {
     //this.fileNum=filenNum;
     //addReport(fileNum);
    }*/
+	}
 
-
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void addReport(ITestContext ctx) throws InterruptedException {
 		/*driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 		Thread.sleep(6000);
@@ -298,7 +298,7 @@ try {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void ACDQuicklinks() throws InterruptedException{
 		//-->Quick Links
 		driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
@@ -418,7 +418,7 @@ try {
 
 	}
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void docUpload(ITestContext ctx) throws InterruptedException {
 
 		//driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
@@ -518,7 +518,7 @@ try {
 		Thread.sleep(10000);
 	}
 
-	@Test (priority = 7)
+	//@Test (priority = 7)
 	public void SearchRequest() throws InterruptedException {
 		driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 		Thread.sleep(10000);
@@ -764,7 +764,7 @@ try {
 				System.out.println("-->Search Request-Method is Executed Successfully");
 				Thread.sleep(5000);
 	}
-	@Test (priority = 4)
+	//@Test (priority = 4)
 	public void FileInfo(ITestContext ctx) throws InterruptedException {
 		//driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 		//Thread.sleep(6000);
@@ -934,7 +934,7 @@ try {
 		Thread.sleep(7000);
 		}
 	
-	@Test (priority = 5)
+	//@Test (priority = 5)
 		public void Actions(ITestContext ctx) throws InterruptedException {
 			//driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 			//Thread.sleep(6000);
@@ -1082,7 +1082,7 @@ try {
     		Thread.sleep(7000);
     		}
 	
-	@Test(priority = 8)
+	//@Test(priority = 8)
 	public void OfflineReports() throws InterruptedException {
 		driver.findElement(By.xpath("//*[contains(@id,'lnkRequests')]")).click();
 		Thread.sleep(7000);
@@ -1177,7 +1177,7 @@ try {
 		Thread.sleep(7000);	
 		}
 	
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	public void FileAdjud_FCRA() throws InterruptedException{
 		/*driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
 		driver.findElement(By.xpath("//*[contains(@id,'lnkRequests')]")).click();
