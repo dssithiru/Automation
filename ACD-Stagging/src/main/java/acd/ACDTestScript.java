@@ -353,7 +353,7 @@ public class ACDTestScript {
 		Thread.sleep(9000);
 		// -->All Requests HyperLinks
 		driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
-		Thread.sleep(18000);
+		Thread.sleep(27000);
 		// driver.findElement(By.xpath("//*[contains(text(),'Closed - C')]")).click();
 		driver.findElement(By.xpath("//*[contains(text(),'Draft - DFT')]")).click();
 		Thread.sleep(9000);
