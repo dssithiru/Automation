@@ -557,7 +557,7 @@ public class ACDTestScript {
 	//@Test(priority = 7)
 	public void SearchRequest() throws InterruptedException {
 		driver.findElement(By.xpath("//*[contains(@id,'lnkHome')]")).click();
-		Thread.sleep(10000);
+		Thread.sleep(18000);
 		driver.findElement(By.xpath("//*[contains(@id,'lnkSearchRequests')]")).click();
 		// -->SEARCH BY FIRST NAME
 		driver.findElement(By.xpath("//*[contains(@id,'txtFName')]")).sendKeys("T");
@@ -1374,7 +1374,7 @@ public class ACDTestScript {
 
 		}
 		//Thread.sleep(5000);
-		Thread.sleep(32000);
+		Thread.sleep(40000);
 		new Select(driver.findElement(By.xpath("//select[contains(@id,'ddlAdjudication')]"))).selectByValue("YFLAG");
 		WebElement emailTo = driver.findElement(By.xpath("//*[contains(@id,'txtEmailTo')]"));
 		emailTo.clear();
@@ -1439,7 +1439,7 @@ public class ACDTestScript {
 		Thread.sleep(5000);
 		// 2nd Adjudication
 		driver.findElement(By.xpath("//*[contains(@class,'detailbutton')]")).click();
-		Thread.sleep(40000);
+		Thread.sleep(55000);
 		new Select(driver.findElement(By.xpath("//select[contains(@id,'ddlAdjudication')]"))).selectByValue("GFLAG");
 		WebElement emailTo2 = driver.findElement(By.xpath("//*[contains(@id,'txtEmailTo')]"));
 		emailTo2.clear();
