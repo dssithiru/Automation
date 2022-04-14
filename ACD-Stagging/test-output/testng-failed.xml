@@ -5,9 +5,8 @@
     <classes>
       <class name="scenarioExecution.ACDScenarioExecution">
         <methods>
+          <include name="myAcheckBulkInvite"/>
           <include name="setUp"/>
-          <include name="myAcheckCreateInvite" invocation-numbers="0"/>
-          <include name="ACDscript" invocation-numbers="0"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- scenarioExecution.ACDScenarioExecution -->

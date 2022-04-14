@@ -102,7 +102,7 @@ public class Commonaction {
 		
 		public void tabKey() {
 			 Actions actions = new Actions(driver);
-		      actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB)	.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
+		      actions.sendKeys(Keys.TAB).sendKeys(Keys.ENTER).build().perform();
 
 		}
 		
